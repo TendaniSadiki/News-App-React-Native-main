@@ -23,8 +23,11 @@ import US from '../screens/Country/US';
 import Canada from '../screens/Country/Canada';
 import Australia from '../screens/Country/Australia';
 import NewZealand from '../screens/Country/NewZeal';
+import ZA from '../screens/Country/ZA';
+
 
 import DrawerContent from "./DrawerContent";
+
 
 const Drawer = createDrawerNavigator();
 
@@ -59,6 +62,7 @@ const DrawerNavigator = () => {
                  color={focused ? '#2E5BE3' : '#Da3349'}
               />
            ),}} />
+           <Drawer.Screen name="Za" component={ZA} options={{headerShown: true}} />
           <Drawer.Screen name="India" component={India} options={{headerShown: true}} />
           <Drawer.Screen name="US" component={US} options={{headerShown: true}} />
           <Drawer.Screen name="Canada" component={Canada} options={{headerShown: true}} />

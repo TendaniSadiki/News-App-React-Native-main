@@ -23,7 +23,7 @@ const Home = ({ navigation }) => {
   } */
 
   function getNewsFromAPI() {
-    newAPI.get('top-headlines?country=us&apiKey=920deb9f754348c0bec4871fef36d971')
+    newAPI.get('top-headlines?sources=techcrunch&apiKey=a729f15843b8478f8d816c004e91893c')
       .then(async function (response) {
         setNews(response.data)
       })
@@ -92,11 +92,8 @@ const Home = ({ navigation }) => {
         
         }}
       >
-        <Image
-          source={require('../assets/img/header-logo.png')}
-          style={{ width: 65, height: 65, alignSelf: 'flex-start', paddingLeft: 10, marginLeft: 10 }}
-        />
-        <Text style={styles.mainText}>The NewsX Times</Text>
+       
+        <Text style={styles.mainText}>News</Text>
       </View>
       <ScrollView>
         <View>

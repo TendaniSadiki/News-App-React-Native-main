@@ -25,7 +25,7 @@ function Card({ item, onPress }) {
     //handleShare
     const handleShare = () => {
         const {url, title} = item; //get url and title form our prop
-        var message = `${title} \n\n Read More ${url} \n\n Shared via The NewsXTimes`; // custome message
+        var message = `${title} \n\n Read More ${url} \n\n Shared via The News`; // custome message
         return Share.share(
             {title, message, url: message},
             {dialogTitle: `Share ${title}`}

@@ -13,7 +13,7 @@ const theme = {
     },
     dark: {
       theme: "dark",
-      headerColor: '#DA3349',
+      headerColor: '#663399',
       bottomTabColor: 'white',
       cardBackground: 'white',
       textColor: 'black',

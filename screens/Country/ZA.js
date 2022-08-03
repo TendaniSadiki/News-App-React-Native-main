@@ -1,11 +1,10 @@
 import React, {useEffect, useState, useContext} from 'react';
 import { View, StyleSheet, Text, FlatList, ActivityIndicator, ScrollView, Image, Statusbar } from 'react-native';
-import themeContext from '../config/themeContext';
+import Card from '../../components/Card';
+import newAPI from '../../apis/News';
+import themeContext from '../../config/themeContext';
 
-import Card from '../components/Card';
-import newAPI from '../apis/News';
-
-const Tech = ({ navigation }) => {
+const ZA = ({ navigation }) => {
 
     const [isLoading, setLoading] = useState(true);
     const [newstech, setNewsTech] = useState([])
@@ -20,7 +19,7 @@ const Tech = ({ navigation }) => {
     } */
 
     function getNewsFromAPI() {
-        newAPI.get('top-headlines?country=za&category=science&apiKey=a729f15843b8478f8d816c004e91893c')
+        newAPI.get('top-headlines?country=za&apiKey=a729f15843b8478f8d816c004e91893c')
         .then(async function(response){
             setNewsTech(response.data)
         })
@@ -35,9 +34,7 @@ const Tech = ({ navigation }) => {
     if(!newstech) {
         return null
     }
-    
     const theme = useContext(themeContext);
-
     return (
         <ScrollView style={{backgroundColor: theme.backColor}}>
             {isLoading ? <ActivityIndicator size="large" color="#DA3349" /> : (
@@ -70,4 +67,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Tech
+export default ZA

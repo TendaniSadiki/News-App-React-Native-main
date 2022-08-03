@@ -20,7 +20,7 @@ const Health = ({ navigation }) => {
     } */
 
     function getNewsFromAPI() {
-        newAPI.get('top-headlines?country=us&category=health&apiKey=920deb9f754348c0bec4871fef36d971')
+        newAPI.get('top-headlines?country=za&category=health&apiKey=a729f15843b8478f8d816c004e91893c')
         .then(async function(response){
             setNewsTech(response.data)
         })
